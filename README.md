@@ -1,24 +1,22 @@
-# README
+# Tricks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Привет. Tricks - портфолио-проект, который я разрабатываю для изучения Ruby on Rails, для дальнейшего устройства в качества RoR разработчика.
 
-Things you may want to cover:
+Проект представляет из себя копию Пикабу(адаптированный аналог англоязычного портала Reddit). Помогает в реализации проекта мой ментор [Кирилл](https://github.com/karpinovsky).
 
-* Ruby version
+Вещи, которые будут *реализованы* (будут дополняться) :
 
-* System dependencies
+* Базовый дизайн сайта
+* Полноценная система идентификации и аутентификации пользователей
+* Возможность регистрации и авторизации через соц. сети и электронную почту
+* Создание постов с различным содержанием (текст, картинки, видео)
+* Комментирование постов
+* Создание сообществ
+* Поиск постов по хештегам и сообществам
+* Отношения между пользователями(follow/unfollow)
+* Рейтинговая система
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
