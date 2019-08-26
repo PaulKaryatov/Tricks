@@ -1,0 +1,13 @@
+Rails:
+  Enabled: true
+AllCops:
+    Exclude:
+    - config/**/*
+    - db/**/*
+    - bin/*
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/LineLength:
+  Max: 150
+Style/Documentation:
+  Enabled: false
