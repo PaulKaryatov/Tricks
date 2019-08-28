@@ -12,5 +12,8 @@ html
     = javascript_include_tag \
        'application',
        'data-turbolinks-track': 'reload'
+    = render 'layouts/shim'   
   body
+    = render 'layouts/headerer'
+    = render 'layouts/sidebar'
     ==yield
