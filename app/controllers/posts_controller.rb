@@ -23,6 +23,12 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy if current_user.posts.include?(@post)
+    if @post.destroy 
+    @post.files.each { |file| 
+    file.purge }
+    @post.vids.each { |vids|
+      vid.purge}
+    end
     redirect_to root_url
   end
 
