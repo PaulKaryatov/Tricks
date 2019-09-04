@@ -1,0 +1,11 @@
+Username:<%= @user.username %> <br />
+Gender:<%= @user.gender %> <br />
+Avatar:
+<%= image_tag(@user.avatar_url) if @user.avatar? %>
+
+
+<% if @user.posts.any? %>
+
+      <h3><%= @user.username %> posts (<%= @user.posts.count %>)</h3>
+       <%= render template: "posts/index" %>
+        <% end %>

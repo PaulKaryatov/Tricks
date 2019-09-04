@@ -8,9 +8,10 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'active_storage_validations'
+gem 'pg', '~> 1.1', '>= 1.1.4'
 # Use Puma as the app server
+gem 'carrierwave', '~> 2.0'
 gem 'devise'
 gem 'puma', '~> 3.11'
 gem 'rubocop', require: false

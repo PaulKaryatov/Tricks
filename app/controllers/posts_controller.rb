@@ -23,11 +23,11 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy if current_user.posts.include?(@post)
-    if @post.destroy 
-    @post.files.each { |file| 
-    file.purge }
-    @post.vids.each { |vids|
-      vid.purge}
+    if @post.destroy
+      @post.files.each(&:purge)
+      @post.vids.each do |_vids|
+        vid.purge
+      end
     end
     redirect_to root_url
   end
@@ -35,7 +35,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:id, :user_id, :content, :title)
+    params.require(:post).permit(:id, :user_id, :content, :title, files: [], vids: [])
   end
-
 end
