@@ -9,11 +9,12 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1', '>= 1.1.4'
+gem 'active_storage_validations'
 # Use Puma as the app server
 gem 'devise'
 gem 'puma', '~> 3.11'
-gem 'slim'
 gem 'rubocop', require: false
+gem 'slim'
 gem 'slim_lint'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
