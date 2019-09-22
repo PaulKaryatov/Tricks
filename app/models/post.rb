@@ -6,18 +6,16 @@ class Post < ApplicationRecord
   validates :content, presence: true
   validates :title, presence: true
   validate  :check_files_type
-#  validates :files, content_type: [:png, :jpg, :jpeg]
+  #  validates :files, content_type: [:png, :jpg, :jpeg]
   default_scope -> { order(created_at: :desc) }
 
-
   private
-  def check_files_type
-  	return unless files.attached?
-  	files.each do |file|
-  	  if !file.content_type.in?(%('image/jpeg image/png'))
-  		errors.add(:file, "should be jpg or png")
 
-  	  end
-  	end
-  end	
+  def check_files_type
+    return unless files.attached?
+
+    files.each do |file|
+      errors.add(:file, 'should be jpg or png') unless file.content_type.in?(%('image/jpeg image/png'))
+    end
+  end
 end
