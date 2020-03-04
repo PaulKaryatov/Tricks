@@ -12,7 +12,7 @@ gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'active_storage_validations'
 # Use Puma as the app server
 gem 'devise'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rubocop', require: false
 gem 'slim'
 gem 'slim_lint'
